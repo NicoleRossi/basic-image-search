@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
+        <title>Basic Google Image Search</title>
+        <link rel="stylesheet" text="text/css" href="styles.css">
+        <script src="actions.js"></script>
+    </head>
+    <body>
+        <form id="basicImageSearch" novalidate>
+            <div id="queryInput">
+                <input type="text" id="txtQuery" value="Please type a search term"/>
+            </div>
+            <div id="imgSizeSelect">
+                <div class="imgSizeRadioBtn"><input type="radio" name="imgSize" value="icon">Tiny</div>
+                <div class="imgSizeRadioBtn"><input type="radio" name="imgSize" value="small">Small</div>
+                <div class="imgSizeRadioBtn"><input type="radio" name="imgSize" value="medium">Medium</div>
+                <div class="imgSizeRadioBtn"><input type="radio" name="imgSize" value="large" checked>Large</div>
+                <div class="imgSizeRadioBtn"><input type="radio" name="imgSize" value="xlarge">Extra Large</div>
+                <div class="imgSizeRadioBtn"><input type="radio" name="imgSize" value="xxlarge">Extra, Extra Large</div>
+                <div class="imgSizeRadioBtn"><input type="radio" name="imgSize" value="huge">Huge</div>
+            </div>
+            <div id="submitButtons">
+                <button type="button" id="btnSearch">New Search</button>
+                <button type="button" id="btnMore">More Images?</button>
+            </div>
+        </form>
+        
+        <div id="imageGrid"></div>
+        
+        <div id="lightbox">
+            <div id="lightboxRow">
+                <div id="lightboxImageCell">
+                    <img id="lightboxImage">
+                    <p id="caption"></p>
+                </div>
+            </div>
+            
+            <div id="loadingScreen">
+                <img id="loading" src="images/loading.gif">
+            </div>
+            
+            <div id="loadImageErrorScreen">
+                <p id="loadImageErrorMessage">This image could not be loaded. :'(</p>
+            </div>
+            
+            <div id="btnPrev">
+                <img id="prev" src="images/prev.png">
+            </div>
+            <div id="btnNext">
+                <img id="next" src="images/next.png">
+            </div>
+        </div>
+    </body>
+</html>

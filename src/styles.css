@@ -1,0 +1,172 @@
+body, div {
+    margin: 0px;
+    padding: 0px;
+}
+
+#basicImageSearch {
+    margin: auto;
+    text-align: center;
+}
+
+#queryInput {
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#txtQuery {
+    width: 100%;
+}
+
+#imgSizeSelect {
+    width: 100%;
+    margin: auto;
+}
+
+.imgSizeRadioBtn {
+    display: inline-block;
+    padding: 10px;
+}
+
+#btnSearch {
+    
+}
+
+#btnMore {
+    display: none;
+}
+
+#imageGrid {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.imageRow {
+    display: table-row;
+}
+
+.imageCell {
+    width: 10%;
+    display: table-cell;
+    vertical-align: middle;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#lightbox {
+    position: fixed;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+#lightboxRow {
+/*    display: table-cell;*/
+    display: none;
+    vertical-align: middle;
+}
+
+#lightboxImageCell, #loading {
+    text-align: center;
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#lightboxImage {
+    border: 1px solid black;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#caption {
+    font-size: 1em;
+    font-family: sans-serif;
+    color: black;
+    line-height: normal;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    position: absolute;
+    bottom: 9px;
+    left: 11px;
+}
+
+#loadingScreen {
+    display: none;
+    vertical-align: middle;
+}
+
+#loadImageErrorScreen {
+    display: none;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loadImageErrorMessage {
+    font-family: sans-serif;
+    line-height: normal;
+    text-align: center;
+    color: white;
+    position: absolute;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+    width: 100%;
+}
+
+
+.disabledBtn {
+    opacity: 0.4;
+}
+
+#btnPrev {
+    position: fixed;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#btnNext {
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next { 
+    display: block;
+}
+
+#prev {
+    display: block;
+}
