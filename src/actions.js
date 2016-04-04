@@ -39,7 +39,7 @@
     }
     
     function setupLightbox(imageIndex, imageWidth, imageHeight) {
-        console.log("lightbox provided image dim: " + imageWidth + " x " + imageHeight)
+        //console.log("lightbox provided image dim: " + imageWidth + " x " + imageHeight)
         
         
         var windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
@@ -47,12 +47,12 @@
             newWidth,
             newHeight;
         
-        console.log("windowWidth x windowHeight = " + windowWidth + " x " + windowHeight);
+        //console.log("windowWidth x windowHeight = " + windowWidth + " x " + windowHeight);
         
         if (imageHeight > imageWidth) {
-            console.log("Vertical image");
+            //console.log("Vertical image");
             if (imageHeight + 22 > windowHeight) {
-                console.log("whoa, so tall!");
+                //console.log("whoa, so tall!");
                 newHeight = windowHeight - 2 * 10;
                 newWidth = Math.round(newHeight * imageWidth / imageHeight);
                 
@@ -67,7 +67,7 @@
                 caption.style.width = newWidth - 2 * 10 + "px";
                 
             } else {
-                console.log("regular image");
+                //console.log("regular image");
                 if (imageWidth + 22 > windowWidth - 55 * 2) {
                     newWidth = windowWidth - 2 * 10 - 55 * 2;
                     newHeight = Math.round(newWidth * imageHeight / imageWidth);
@@ -76,7 +76,7 @@
                     lightboxImageCell.style.height = newHeight + "px";
                     caption.style.width = newWidth - 2 * 10 + "px";
                 } else {
-                    console.log("imageWidth x imageHeight = " + imageWidth + " x " + imageHeight);
+                    //console.log("imageWidth x imageHeight = " + imageWidth + " x " + imageHeight);
                     lightboxImageCell.style.width = imageWidth + "px";
                     lightboxImageCell.style.height = imageHeight + "px";
                     caption.style.width = imageWidth - 2 * 10 + "px";
@@ -84,12 +84,12 @@
             }
             
         } else {
-            console.log("horizontal image")
+            //console.log("horizontal image")
             if (imageWidth + 22 > windowWidth - 55 * 2) {
                 newWidth = windowWidth - 2 * 10 - 55 * 2;
                 newHeight = Math.round(newWidth * imageHeight / imageWidth);
                 
-                console.log("newWidth x new Height = " + newWidth + " x " + newHeight);
+                //console.log("newWidth x new Height = " + newWidth + " x " + newHeight);
                 
                 if (newHeight + 22 > windowHeight) {
                     newHeight = windowHeight - 2 * 10;
@@ -101,19 +101,19 @@
                 
                 caption.style.width = newWidth - 2 * 10 + "px";
             } else {
-                console.log("cow");
+                //console.log("cow");
                 if (imageHeight + 22 > windowHeight) {
-                    console.log("pie");
+                    //console.log("pie");
                     newHeight = windowHeight - 2 * 10;
                     newWidth = Math.round(newHeight * imageWidth / imageHeight);
                     
-                    console.log("newWidth x newHeight = " + newWidth + " x " + newHeight);
+                    //console.log("newWidth x newHeight = " + newWidth + " x " + newHeight);
                     
                     lightboxImageCell.style.width = newWidth + "px";
                     lightboxImageCell.style.height = newHeight + "px";
                     caption.style.width = newWidth - 2 * 10 + "px";
                 } else {
-                    console.log("pasture.");
+                    //console.log("pasture.");
                     lightboxImageCell.style.width = imageWidth + "px";
                     lightboxImageCell.style.height = imageHeight + "px";
                     caption.style.width = imageWidth - 2 * 10 + "px";
@@ -138,7 +138,7 @@
         index = parseInt(evt.currentTarget.id);
         imageDatum = imageData[index];
         currentImageIndex = index;
-        console.log("clickedThumbnail:  currentImageIndex = " + currentImageIndex);
+        //console.log("clickedThumbnail:  currentImageIndex = " + currentImageIndex);
         
         lightboxImageIsLoaded = function (evt) {
             lightboxImage.removeEventListener("load", lightboxImageIsLoaded);
@@ -258,7 +258,7 @@
             paramStr,
             prop;
         
-        console.log("loadDoc:  selectedImageSize = " + selectedImageSize);
+        //console.log("loadDoc:  selectedImageSize = " + selectedImageSize);
         
         params.q = query; // search text
         params.num = 10; // integer value range between 1 to 10 including
@@ -306,7 +306,7 @@
             setupLightbox(currentImageIndex, imageDatum.width, imageDatum.height);
             enableSlideshowBtns();
             
-            console.log("gotoPrevImage:  currentImageIndex = " + currentImageIndex);
+            //console.log("gotoPrevImage:  currentImageIndex = " + currentImageIndex);
         };
         lightboxImage.addEventListener("load", imageIsLoaded);
         
@@ -319,7 +319,7 @@
             loadImageErrorScreen.style.display = "table-cell";
             enableSlideshowBtns();
             
-            console.log("gotoPrevImage:  currentImageIndex = " + currentImageIndex);
+            //console.log("gotoPrevImage:  currentImageIndex = " + currentImageIndex);
         };
         lightboxImage.addEventListener("error", imageLoadError);
         lightboxImage.src = imageDatum.url;
@@ -396,7 +396,7 @@
             imgSizes = document.getElementsByName("imgSize");
         [].forEach.call(imgSizes, function (node, index, array) {
             if(node.checked) {
-                console.log("You chose " + node.value);
+                //console.log("You chose " + node.value);
                 newImageSize = node.value;
             }
         });
@@ -423,7 +423,7 @@
             query = newQuery;
             selectedImageSize = newImageSize;
             
-            console.log("getMoreImages:  selectedImageSize = " + selectedImageSize);
+            //console.log("getMoreImages:  selectedImageSize = " + selectedImageSize);
             clearImageGrid(loadDoc);
         }
     }
@@ -436,7 +436,7 @@
         }
         query = newQuery;
         selectedImageSize = getChosenImageSize();
-        console.log("performNewSearch:  selectedImageSize = " + selectedImageSize);
+        //console.log("performNewSearch:  selectedImageSize = " + selectedImageSize);
         
         disableInputBtns();
         

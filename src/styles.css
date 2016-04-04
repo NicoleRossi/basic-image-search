@@ -28,10 +28,6 @@ body, div {
     padding: 10px;
 }
 
-#btnSearch {
-    
-}
-
 #btnMore {
     display: none;
 }
@@ -79,7 +75,6 @@ body, div {
 }
 
 #lightboxRow {
-/*    display: table-cell;*/
     display: none;
     vertical-align: middle;
 }
@@ -107,8 +102,8 @@ body, div {
     color: black;
     line-height: normal;
     text-align: left;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.75);
     position: absolute;
